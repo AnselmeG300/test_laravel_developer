@@ -57,4 +57,10 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    //retourne la liste des produits enregistré par un utilisateur
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }
