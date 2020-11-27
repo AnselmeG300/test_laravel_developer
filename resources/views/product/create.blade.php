@@ -12,7 +12,7 @@
         <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
                 <div class="col-xl-8 col-lg-10 col-md-10 col-sm-12 col-12 offset-xl-2 offset-lg-1 offset-md-1 offset-sm-0 offset-0">
                     <div class="card ">  
-                        <form method="POST" action="{{ route('products.store') }}">
+                        <form method="POST" action="{{ route('products.store') }}" autocomplete="off" class="form-horizontal"  enctype="multipart/form-data">
                             @csrf
                             @method('post')
                             <div class="card-body">

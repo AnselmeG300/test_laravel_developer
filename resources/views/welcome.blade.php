@@ -11,9 +11,9 @@
 		<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
 		<!-- Bootstrap core CSS -->
-		<link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+		<link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
 
-			<!-- Favicons -->
+		<!-- Favicons -->
 		<link rel="apple-touch-icon" href="{{asset('img/market_icon.png')}}" sizes="180x180">
 		<link rel="icon" href="{{asset('img/market_icon.png')}}" sizes="32x32" type="image/png">
 		<link rel="icon" href="{{asset('img/market_icon.png')}}" sizes="16x16" type="image/png">
@@ -100,124 +100,38 @@
 
   <div class="album py-5 bg-light">
 	<div class="container">
-
-	  <div class="row">
-		<div class="col-md-4">
-		  <div class="card mb-4 shadow-sm">
-			<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-			<div class="card-body">
-			  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-			  	<div class="text-right">
-                    <strong class="text-right" style="font-weight: bold; font-size: 1.5em;">9 FCFA</strong>
-			    </div>
-			</div>
-		  </div>
-		</div>
-		<div class="col-md-4">
-		  <div class="card mb-4 shadow-sm">
-			<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-			<div class="card-body">
-			  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-			  	<div class="text-right">
-                    <strong class="text-right" style="font-weight: bold; font-size: 1.5em;">9 FCFA</strong>
-			    </div>
-			</div>
-		  </div>
-		</div>
-		<div class="col-md-4">
-		  <div class="card mb-4 shadow-sm">
-			<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-			<div class="card-body">
-			  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-			  	<div class="text-right">
-                    <strong class="text-right" style="font-weight: bold; font-size: 1.5em;">9 FCFA</strong>
-			    </div>
-			</div>
-		  </div>
-		</div>
-
-		<div class="col-md-4">
-		  <div class="card mb-4 shadow-sm">
-			<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-			<div class="card-body">
-			  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-			  	<div class="text-right">
-                    <strong class="text-right" style="font-weight: bold; font-size: 1.5em;">9 FCFA</strong>
-			    </div>
-			</div>
-		  </div>
-		</div>
-		<div class="col-md-4">
-		  <div class="card mb-4 shadow-sm">
-			<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-			<div class="card-body">
-			  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-			  	<div class="text-right">
-                    <strong class="text-right" style="font-weight: bold; font-size: 1.5em;">9 FCFA</strong>
-			    </div>
-			</div>
-		  </div>
-		</div>
-		<div class="col-md-4">
-		  <div class="card mb-4 shadow-sm">
-			<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-			<div class="card-body">
-			  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-			  	<div class="text-right">
-                    <strong class="text-right" style="font-weight: bold; font-size: 1.5em;">9 FCFA</strong>
-			    </div>
-			</div>
-		  </div>
-		</div>
-
-		<div class="col-md-4">
-		  <div class="card mb-4 shadow-sm">
-			<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-			<div class="card-body">
-			  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-			  	<div class="text-right">
-                    <strong class="text-right" style="font-weight: bold; font-size: 1.5em;">9 FCFA</strong>
-			    </div>
-			</div>
-		  </div>
-		</div>
-		<div class="col-md-4">
-		  <div class="card mb-4 shadow-sm">
-			<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-			<div class="card-body">
-			  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-			  	<div class="text-right">
-                    <strong class="text-right" style="font-weight: bold; font-size: 1.5em;">9 FCFA</strong>
-			    </div>
-			</div>
-		  </div>
-		</div>
-		<div class="col-md-4">
-		  <div class="card mb-4 shadow-sm">
-			<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-			<div class="card-body">
-			  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-			  	<div class="text-right">
-                    <strong class="text-right" style="font-weight: bold; font-size: 1.5em;">9 FCFA</strong>
-			    </div>
-			</div>
-		  </div>
-		</div>
-	  </div>
+	  	<div class="row">
+		  	@if(!empty(App\Models\Product::all()))
+				@foreach(App\Models\Product::all() as $product)
+				<div class="col-md-4">
+					<div class="card mb-4 shadow-sm" style="border-radius: 5%;">
+						<img class="img img-responsive" style="height: 250px; border-radius: 5% 5% 0% 0%;"  src="{{ asset($product->picture) }}" alt="your image" />
+						<div class="card-body">
+							<p class="card-text">{{ $product->description }}</p>
+							<div class="text-right">
+								<strong class="text-right" style="font-weight: bold; font-size: 1.5em;">{{ $product->price }} FCFA</strong>
+							</div>
+						</div>
+					</div>
+				</div>
+				@endforeach
+			@else
+		  		<h1> No products posted for the moment. <a href="{{ route('products.create') }}"><strong style="font-weight: bold;"> Click here to post! </strong></a></h1>
+			@endif
+	  	</div>
 	</div>
   </div>
 
 </main>
 
 <footer class="text-muted">
-  <div class="container">
-	<p class="float-right">
-	  <a href="#">Back to top</a>
-	</p>
-	<p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-	<p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="/docs/4.5/getting-started/introduction/">getting started guide</a>.</p>
-  </div>
+  	<div class="container">
+		<p class="float-right">
+		<a href="#">Back to top</a>
+		</p>
+	</div>
 </footer>
-<script src="{{asset('js/jquery-3.5.1.slim.min.js')}}" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	  <script>window.jQuery || document.write('<script src="https://getbootstrap.com/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="{{asset('js/bootstrap.bundle.min.js')}}" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script></body>
+<script src="{{asset('js/jquery-3.5.1.slim.min.js')}}"></script>
+<script src="{{asset('js/bootstrap.bundle.min.js')}}" ></script>
+</body>
 </html>

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Utilities\Image;
-use Illuminate\Http\Request;
 use App\Http\Requests\ProductRequest;
 use Illuminate\Support\Facades\Auth;
 
@@ -28,7 +27,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('product.index');
+        //
     }
 
     /**
@@ -48,7 +47,7 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
         //
         Image::recoveredImage($request);
@@ -66,7 +65,7 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         //
-        return view('product.show');
+        
     }
 
     /**
@@ -78,6 +77,8 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         //
+        $product = Product::findOrFail($product->id);
+        return view('product.edit', compact('product'));
     }
 
     /**
@@ -94,7 +95,9 @@ class ProductController extends Controller
             Image::recoveredImage($request);
         else
             $request['picture'] = $request['oldFile'];
-
+        $request['user_id'] = Auth::id();
+        $product = Product::findOrFail($product->id);
+        $product->update($request->all());
         return redirect()->back()->withStatus(__("Product Information ".$request['name']." update")); 
     }
 
@@ -107,8 +110,8 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         //
-        $product = Product::findOrFail($product);
+        $product = Product::findOrFail($product->id);
         Product::destroy($product);
-        return redirect()->route('students.create')->withStatus(__("Product ".$request['name']." delete"));
+        return redirect()->route('dashboard')->withStatus(__("Product ".$product['name']." delete"));
     }
 }

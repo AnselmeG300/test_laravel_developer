@@ -8,7 +8,6 @@ class ImageHelper
     public static function createImage () {
         return '<div class="form-group">
                     <div class="file-upload col-12 text-right">
-                        <button class="file-upload-btn btn btn-primary btn-sm add" type="button" onclick="$(\'.file-upload-input\').trigger( \'click\' )">IMAGE AU FORMAT PNG/JPG/GIF</button>          
                         <div class="file-upload-content" style="display:none;">
                             <div class="image-title-wrap ">
                                 <button class="file-upload-btn btn btn-primary btn-sm " title="modifier la photo" type="button" onclick="$(\'.file-upload-input\').trigger( \'click\' )">
@@ -22,12 +21,12 @@ class ImageHelper
                             </div>
                         </div>
                         <div class="image-upload-wrap">
-                            <input class="file-upload-input" type=\'file\' id="id_file-upload-input" onchange="readURL(this);" accept="image/*" name="currentFile" />
+                            <input class="file-upload-input" type=\'file\' id="id_file-upload-input" value="IMAGE AU FORMAT PNG/JPG/GIF" onchange="readURL(this);" accept="image/*" name="currentFile" required/>
                             <div class="drag-text">
                             </div>
                         </div>
                         <div class="file-upload-content " style="display:none;">
-                            <img class="file-upload-image img img-responsive" style="height: 200px; width: 200px; border-radius: 10%;" name="currentImage"  src="#" alt="your image" />
+                            <img class="file-upload-image img img-responsive" style="height: 250px; width: 400px; border-radius: 10%;" name="currentImage"  src="#" alt="your image" />
                         </div>
                     </div>
                 </div>';    

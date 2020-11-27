@@ -21,4 +21,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/my_products', function ()
     return view('dashboard');
 })->name('dashboard');
 
-Route::resource('products', ProductController::class)->except(['index', 'edit']);
+Route::resource('products', ProductController::class)->except(['index', 'show']);

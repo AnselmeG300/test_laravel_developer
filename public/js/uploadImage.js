@@ -1,3 +1,4 @@
+
 function readURL(input) {
     console.log('toto');
     if (input.files && input.files[0]) {

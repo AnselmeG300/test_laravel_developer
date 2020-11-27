@@ -28,7 +28,7 @@ class ProductRequest extends FormRequest
         return [
             'name' => ['required', Rule::unique((new Product)->getTable())->ignore($this->route()->product->id ?? null)],
             'description' => '',
-            'currentFile' => 'file',
+            'currentFile' => 'required|image',
             'price' => 'required|int',
         ];
     }

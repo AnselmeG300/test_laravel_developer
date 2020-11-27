@@ -9,8 +9,7 @@ class Image
     public static function recoveredImage($request)
     {  //dd($request['currentImage']);
         $path="img/products/";
-        if(isset($request['currentFile'])) {
-            dd($_FILES) ;   
+        if(isset($request['currentFile'])) {  
             if(isset($_FILES['currentFile']) and $_FILES['currentFile']['error'] == 0) {
 
                 if($_FILES['currentFile']['size'] <= 8000000) {

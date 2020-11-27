@@ -1,13 +1,7 @@
 
 	<head>
 		<link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
-		<!-- Favicons -->
-		<link rel="apple-touch-icon" href="{{asset('img/market_icon.png')}}" sizes="180x180">
-		<link rel="icon" href="{{asset('img/market_icon.png')}}" sizes="32x32" type="image/png">
-		<link rel="icon" href="{{asset('img/market_icon.png')}}" sizes="16x16" type="image/png">
-		<link rel="mask-icon" href="{{asset('img/market_icon.png')}}" color="#563d7c">
-		<link rel="icon" href="{{asset('img/market_icon.png')}}">
-		<meta name="theme-color" content="#563d7c">
+
 		<style>
 		  .bd-placeholder-img {
 			font-size: 1.125rem;
@@ -31,25 +25,23 @@
 <main role="main">
 	@if(!(auth()->user()->products->isEmpty()))
   	<div class="album py-5 bg-light">
-		<div class="container">
-			<div class="row">
-				@foreach(auth()->user()->products as $product)
-					<div class="col-md-4">
-						<div class="card mb-4 shadow-sm">
-							<img class="img img-responsive" style="height: 200px; width: 200px; border-radius: 10%;" src="{{ asset($product->picture) }}" alt="your image" />
-							<div class="card-body">
-							<p class="card-text">{{ $product->description }}</p>
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="btn-group">
-									<button type="button" class="btn btn-sm btn-outline-primary">Edit</button>
-									</div>
-									<small class="text-muted">{{ $product->price }} FCFA</small>
+		<div class="row">
+			@foreach(auth()->user()->products as $product)
+				<div class="col-md-4">
+					<div class="card mb-4 shadow-sm">
+						<img class="img img-responsive" src="{{ asset($product->picture) }}" alt="your image" />
+						<div class="card-body">
+						<p class="card-text">{{ $product->description }}</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-primary">Edit</button>
 								</div>
+								<small class="text-muted">{{ $product->price }} FCFA</small>
 							</div>
 						</div>
 					</div>
-				@endforeach
-			</div>
+				</div>
+			@endforeach
 		</div>
  	</div>
 	@else
