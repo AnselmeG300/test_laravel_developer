@@ -101,7 +101,7 @@
   <div class="album py-5 bg-light">
 	<div class="container">
 	  	<div class="row">
-		  	@if(!empty(App\Models\Product::all()))
+		  	@if(!empty(App\Models\Product::all()) && count(App\Models\Product::all()) != 0)
 				@foreach(App\Models\Product::all() as $product)
 				<div class="col-md-4">
 					<div class="card mb-4 shadow-sm" style="border-radius: 5%;">
