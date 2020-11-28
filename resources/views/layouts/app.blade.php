@@ -4,20 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <!-- Bootstrap core CSS -->
-		<link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" >
-        <title>{{ config('app.name', 'Market') }}</title>
+
+        <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-        <!-- Bootstrap core CSS -->
-		<link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
-		<link href="{{asset('css/bootstrap.css')}}" rel="stylesheet">
-
-        <link rel="stylesheet" type="text/css" href="{{ asset('css') }}/display.css" />
 
         @livewireStyles
 
@@ -40,6 +34,12 @@
                 {{ $slot }}
             </main>
         </div>
+
+        @stack('modals')
+
+        @livewireScripts
+    </body>
+</html>
 
         @stack('modals')
         <footer class="text-muted">

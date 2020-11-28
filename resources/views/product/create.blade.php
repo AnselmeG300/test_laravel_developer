@@ -1,6 +1,7 @@
 <x-app-layout>
     <head>
-        <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <!-- Bootstrap core CSS -->
+		<link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{ asset('css') }}/display.css" />
     </head>
     <x-slot name="header">
@@ -71,5 +72,7 @@
             </div>
         </div>
     </div>
+    <script src="{{asset('js/jquery-3.5.1.slim.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.bundle.min.js')}}" ></script>
     <script src="{{ asset('js/uploadImage.js') }}"></script>
 </x-app-layout>

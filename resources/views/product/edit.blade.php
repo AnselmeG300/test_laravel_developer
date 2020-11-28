@@ -1,4 +1,9 @@
 <x-app-layout>
+    <head>
+        <!-- Bootstrap core CSS -->
+		<link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css') }}/display.css" />
+    </head>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Fill in the product information') }}
@@ -112,5 +117,7 @@
             </div>
         </div>
     </div>
+    <script src="{{asset('js/jquery-3.5.1.slim.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.bundle.min.js')}}" ></script>
     <script src="{{ asset('js/uploadImage.js') }}"></script>
 </x-app-layout>
