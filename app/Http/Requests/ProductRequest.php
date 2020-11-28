@@ -27,7 +27,7 @@ class ProductRequest extends FormRequest
     {
         return [
             'name' => 'required|unique:products|min:6',
-            'description' => '',
+            'description' => 'required',
             'currentFile' => 'required|image',
             'price' => 'required|int',
         ];

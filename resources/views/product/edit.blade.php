@@ -36,6 +36,7 @@
                                     <div class="file-upload col-12 text-right">
                                         {!! App\Helpers\ImageHelper::editImage() !!}
                                         <div class="image-upload-wrap" style="display:none;">
+                                            <label for="currentFile"> IMAGE TO FORMAT PNG/JPG/GIF</label>
                                             <input class="file-upload-input" type='file' id="id_file-upload-input" onchange="readURL(this);" accept="image/*" name="currentFile" value="{{  asset( $product->picture )  }}"  />
                                             <div class="drag-text">
                                             </div>

@@ -1,5 +1,8 @@
 <x-app-layout>
     <head>
+        <!-- Bootstrap core CSS -->
+		<link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css') }}/display.css" />
 		<style>
 		  .bd-placeholder-img {
 			font-size: 1.125rem;
@@ -70,4 +73,7 @@
             </main>
         </div>
     </div>
+    <script src="{{asset('js/jquery-3.5.1.slim.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.bundle.min.js')}}" ></script>
+    <script src="{{ asset('js/uploadImage.js') }}"></script>
 </x-app-layout>

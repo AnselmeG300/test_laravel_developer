@@ -21,7 +21,8 @@ class ImageHelper
                             </div>
                         </div>
                         <div class="image-upload-wrap">
-                            <input class="file-upload-input" type=\'file\' id="id_file-upload-input" value="IMAGE AU FORMAT PNG/JPG/GIF" onchange="readURL(this);" accept="image/*" name="currentFile" required/>
+                            <label for="currentFile"> IMAGE TO FORMAT PNG/JPG/GIF</label>
+                            <input class="file-upload-input" type=\'file\' id="id_file-upload-input"  onchange="readURL(this);" accept="image/*" name="currentFile" required/>
                             <div class="drag-text">
                             </div>
                         </div>
