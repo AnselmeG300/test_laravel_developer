@@ -111,7 +111,7 @@ class ProductController extends Controller
     {
         //
         $product = Product::findOrFail($product->id);
-        Product::destroy($product);
+        Product::destroy($product->id);
         return redirect()->route('dashboard')->withStatus(__("Product ".$product['name']." delete"));
     }
 }

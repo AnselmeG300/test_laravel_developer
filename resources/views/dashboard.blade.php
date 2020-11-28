@@ -46,7 +46,7 @@
                             @foreach(auth()->user()->products as $product)
                                 <div class="col-md-4">
                                     <div class="card mb-4 shadow-sm" style="border-radius: 10%;">
-                                        <img class="img img-responsive" style="height: 250px; width: 400px; border-radius: 10% 10% 0% 0% ;"  src="{{ asset($product->picture) }}" alt="your image" />
+                                        <img class="img img-responsive" style="height: 250px;  border-radius: 10% 10% 0% 0% ;"  src="{{ asset($product->picture) }}" alt="your image" />
                                         <div class="card-body">
                                         <p class="card-text">{{ $product->description }}</p>
                                             <div class="d-flex justify-content-between align-items-center">
