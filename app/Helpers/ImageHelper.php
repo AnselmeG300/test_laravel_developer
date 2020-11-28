@@ -19,18 +19,7 @@ class ImageHelper
                                     <div class="ripple-container"></div>
                                 </button>
                             </div>
-                        </div>
-                        <div class="image-upload-wrap">
-                            <label for="currentFile"> IMAGE TO FORMAT PNG/JPG/GIF</label>
-                            <input class="file-upload-input" type=\'file\' id="id_file-upload-input"  onchange="readURL(this);" accept="image/*" name="currentFile" required/>
-                            <div class="drag-text">
-                            </div>
-                        </div>
-                        <div class="file-upload-content " style="display:none;">
-                            <img class="file-upload-image img img-responsive" style="height: 250px; width: 400px; border-radius: 10%;" name="currentImage"  src="#" alt="your image" />
-                        </div>
-                    </div>
-                </div>';    
+                        </div>';    
     }
 
     public static function editImage () {

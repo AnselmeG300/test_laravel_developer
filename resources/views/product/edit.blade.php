@@ -37,7 +37,12 @@
                                         {!! App\Helpers\ImageHelper::editImage() !!}
                                         <div class="image-upload-wrap" style="display:none;">
                                             <label for="currentFile"> IMAGE TO FORMAT PNG/JPG/GIF</label>
-                                            <input class="file-upload-input" type='file' id="id_file-upload-input" onchange="readURL(this);" accept="image/*" name="currentFile" value="{{  asset( $product->picture )  }}"  />
+                                            <input class="file-upload-input @error('currentFile') is-invalid @enderror" type='file' id="id_file-upload-input" onchange="readURL(this);" accept="image/*" name="currentFile" value="{{  asset( $product->picture )  }}"  />
+                                            @error('currentFile')
+                                                <small class="invalid-feedback">
+                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                </small>
+                                            @enderror
                                             <div class="drag-text">
                                             </div>
                                         </div>

@@ -26,10 +26,10 @@ class ProductRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|unique:products|min:6',
+            'name' => ['required', 'min:6', Rule::unique((new Product)->getTable())->ignore($this->route()->product->id ?? null)],
             'description' => 'required',
-            'currentFile' => 'required|image',
-            'price' => 'required|int',
+            'currentFile' => 'image',
+            'price' => 'required',
         ];
     }
 }
