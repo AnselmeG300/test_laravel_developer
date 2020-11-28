@@ -37,7 +37,7 @@
                                     <input class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" id="name" type="text" required />
                                     @error('name')
                                         <small class="invalid-feedback">
-                                            <strong>{{ $message }}</strong>
+                                            <div class="alert alert-danger">{{ $message }}</div>
                                         </small>
                                     @enderror
                                 </div>
@@ -47,7 +47,7 @@
                                     <input class="form-control @error('price') is-invalid @enderror" name="price" value="{{ old('price') }}" id="price" type="number" required />
                                     @error('price')
                                         <small class="invalid-feedback">
-                                            <strong>{{ $message }}</strong>
+                                            <div class="alert alert-danger">{{ $message }}</div>
                                         </small>
                                     @enderror
                                 </div>
@@ -57,7 +57,7 @@
                                     <textarea class="form-control @error('description') is-invalid @enderror" name="description"  id="description">{{ old('description') }}</textarea>
                                     @error('description')
                                         <small class="invalid-feedback">
-                                            <strong>{{ $message }}</strong>
+                                            <div class="alert alert-danger">{{ $message }}</div>
                                         </small>
                                     @enderror
                                 </div>

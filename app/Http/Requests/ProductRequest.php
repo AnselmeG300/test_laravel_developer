@@ -26,7 +26,7 @@ class ProductRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|unique:products',
+            'name' => 'required|unique:products|min:6',
             'description' => '',
             'currentFile' => 'required|image',
             'price' => 'required|int',
