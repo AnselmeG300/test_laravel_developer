@@ -34,7 +34,7 @@
                                     {!! App\Helpers\ImageHelper::createImage() !!}
                                         <div class="image-upload-wrap">
                                             <label for="currentFile"> IMAGE TO FORMAT PNG/JPG/GIF</label>
-                                            <input class="file-upload-input @error('currentFile') is-invalid @enderror" type='file' id="id_file-upload-input "  onchange="readURL(this);" accept="image/*" name="currentFile" required/>
+                                            <input class="file-upload-input @error('currentFile') is-invalid @enderror" type='file' id="id_file-upload-input"  onchange="readURL(this);" accept="image/*" name="currentFile" required/>
                                             @error('currentFile')
                                                 <small class="invalid-feedback">
                                                     <div class="alert alert-danger">{{ $message }}</div>
