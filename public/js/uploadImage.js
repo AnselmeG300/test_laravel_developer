@@ -7,7 +7,7 @@ function readURL(input) {
             if(!reg.test(input.files[0].name) &&  input.files[0].size <= 5000000)
             {
                 var reader = new FileReader();
-                $('#id_oldFile').val("");
+                $('#id_oldFile').val(null);
                 $('.add').hide(); 
                 reader.onload = function(e) {
                     $('.image-upload-wrap').hide();
@@ -32,13 +32,14 @@ function readURL(input) {
 }
 
 function removeUpload() {   
-    $('#id_oldFile').val("");
+    $('#id_oldFile').val(null);
     $('.add').show();
     $('.file-upload-input').replaceWith($('.file-upload-input').clone());
     $('.file-upload-content').hide();
     $('.image-upload-wrap').show();
     $('#id_valueImage').val(null);
     $('#id_file-upload-input').val(null);  
+    $('#id_file-upload-input').prop("required", true);
 }
 
 $('.image-upload-wrap').bind('dragover', function () {

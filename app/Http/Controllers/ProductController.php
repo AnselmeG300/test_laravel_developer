@@ -91,7 +91,7 @@ class ProductController extends Controller
     public function update(ProductRequest $request, Product $product)
     {
         //
-        if(empty($request['oldFile']))
+        if($request['oldFile'] == null)
             Image::recoveredImage($request);
         else
             $request['picture'] = $request['oldFile'];

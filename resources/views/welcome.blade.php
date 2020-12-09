@@ -17,7 +17,7 @@
 		<link rel="apple-touch-icon" href="{{asset('img/market_icon.png')}}" sizes="180x180">
 		<link rel="icon" href="{{asset('img/market_icon.png')}}" sizes="32x32" type="image/png">
 		<link rel="icon" href="{{asset('img/market_icon.png')}}" sizes="16x16" type="image/png">
-		<link rel="mask-icon" href="{{asset('img/market_icon.png')}}" color="#563d7c">
+		<link rel="mask-icon" href="{{asset('img/market_icon.png')}}" color="#e24827">
 		<link rel="icon" href="{{asset('img/market_icon.png')}}">
 		<meta name="theme-color" content="#563d7c">
 		<style>
@@ -41,7 +41,7 @@
 	</head>
 	<body>
 		<header>
-			<div class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="navbar navbar-expand-lg navbar-dark bg-danger">
 				<div class="container d-flex justify-content-between">
 					<a href="#" class="navbar-brand d-flex align-items-center">
 						<strong>Market</strong>
@@ -107,9 +107,15 @@
 					<div class="card mb-4 shadow-sm" style="border-radius: 5%;">
 						<img class="img img-responsive" style="height: 250px; border-radius: 5% 5% 0% 0%;"  src="{{ asset($product->picture) }}" alt="your image" />
 						<div class="card-body">
-							<p class="card-text">{{ $product->description }}</p>
+							<p class="card-text"  data-toggle="tooltip" title="@if(strlen($product->description) > 35) {{ $product->description }} @endif">
+								@if (strlen($product->description) > 35)
+										{{ substr($product->description, 0, 35).' ...' }}
+								@else
+									{{ $product->description }}
+								@endif
+							</p>
 							<div class="text-right">
-								<strong class="text-right" style="font-weight: bold; font-size: 1.5em;">{{ $product->price }} FCFA</strong>
+								<strong class="text-right" style="font-weight: bold; font-size: 1.5em;">{{ number_format($product->price, 0, '',' ') }} FCFA</strong>
 							</div>
 						</div>
 					</div>
@@ -124,7 +130,7 @@
 
 </main>
 
-<footer class="text-muted">
+<footer class="text-muted bg-danger">
   	<div class="container">
 		<p class="float-right">
 		<a href="#">Back to top</a>

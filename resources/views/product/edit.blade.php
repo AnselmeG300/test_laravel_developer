@@ -33,24 +33,43 @@
                                 @endif
                                 <!-- Picture -->
                                 <div class="form-group row">
-                                    <div class="file-upload col-12 text-right">
-                                        {!! App\Helpers\ImageHelper::editImage() !!}
-                                        <div class="image-upload-wrap" style="display:none;">
-                                            <label for="currentFile"> IMAGE TO FORMAT PNG/JPG/GIF</label>
-                                            <input class="file-upload-input @error('currentFile') is-invalid @enderror" type='file' id="id_file-upload-input" onchange="readURL(this);" accept="image/*" name="currentFile" value="{{  asset( $product->picture )  }}"  />
-                                            @error('currentFile')
-                                                <small class="invalid-feedback">
-                                                    <div class="alert alert-danger">{{ $message }}</div>
-                                                </small>
-                                            @enderror
-                                            <div class="drag-text">
+                                    @if($product->picture != null)
+                                        <div class="file-upload col-12 text-right">
+                                            {!! App\Helpers\ImageHelper::editImage() !!}
+                                            <div class="image-upload-wrap" style="display:none;">
+                                                <label for="currentFile"> IMAGE TO FORMAT PNG/JPG/GIF</label>
+                                                <input class="file-upload-input @error('currentFile') is-invalid @enderror" type='file' id="id_file-upload-input" onchange="readURL(this);" accept="image/*" name="currentFile" value="{{  asset( $product->picture )  }}"  />
+                                                @error('currentFile')
+                                                    <small class="invalid-feedback">
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                    </small>
+                                                @enderror
+                                                <div class="drag-text">
+                                                </div>
+                                            </div>
+                                            <input type="text" id="id_oldFile" name="oldFile" value="{{  $product->picture   }}" style="display:none;">
+                                            <div class="file-upload-content">
+                                                <img class="file-upload-image img img-responsive" name="currentImage" style="height: 250px; width: 400px; border-radius: 10%;" src="{{ asset( $product->picture ) }}"  alt="your image" />
                                             </div>
                                         </div>
-                                        <input type="text" id="id_oldFile" name="oldFile" value="{{  $product->picture   }}" style="display:none;">
-                                        <div class="file-upload-content">
-                                            <img class="file-upload-image img img-responsive" name="currentImage" style="height: 250px; width: 400px; border-radius: 10%;" src="{{ asset( $product->picture ) }}"  alt="your image" />
+                                    @else
+                                        {!! App\Helpers\ImageHelper::createImage() !!}
+                                            <div class="image-upload-wrap">
+                                                <label for="currentFile"> IMAGE TO FORMAT PNG/JPG/GIF</label>
+                                                <input class="file-upload-input @error('currentFile') is-invalid @enderror" type='file' id="id_file-upload-input "  onchange="readURL(this);" accept="image/*" name="currentFile" required/>
+                                                @error('currentFile')
+                                                    <small class="invalid-feedback">
+                                                        <div class="alert alert-danger">{{ $message }}</div>
+                                                    </small>
+                                                @enderror
+                                                <div class="drag-text">
+                                                </div>
+                                            </div>
+                                            <div class="file-upload-content " style="display:none;">
+                                                <img class="file-upload-image img img-responsive" style="height: 250px; width: 400px; border-radius: 10%;" name="currentImage"  src="#" alt="your image" />
+                                            </div>
                                         </div>
-                                    </div>
+                                    @endif
                                 </div>
                                 <!-- Name -->
                                 <div class="form-group">
@@ -65,7 +84,7 @@
                                 <!-- Price -->
                                 <div class="form-group">
                                     <label class="col-form-label" for="price"> Price </label>
-                                    <input class="form-control @error('price') is-invalid @enderror" name="price" value="{{ old('price') ? old('price') : $product->price }}" id="price" type="number" required />
+                                    <input class="form-control @error('price') is-invalid @enderror" name="price" value="{{ old('price') ? old('price') : $product->price }}" id="price" type="number" max="999999999999" required />
                                     @error('price')
                                         <small class="invalid-feedback">
                                             <div class="alert alert-danger">{{ $message }}</div>

@@ -30,7 +30,8 @@
                                     </div>
                                 @endif
                                 <!-- Picture -->
-                                {!! App\Helpers\ImageHelper::createImage() !!}
+                                <div class="form-group row">
+                                    {!! App\Helpers\ImageHelper::createImage() !!}
                                         <div class="image-upload-wrap">
                                             <label for="currentFile"> IMAGE TO FORMAT PNG/JPG/GIF</label>
                                             <input class="file-upload-input @error('currentFile') is-invalid @enderror" type='file' id="id_file-upload-input "  onchange="readURL(this);" accept="image/*" name="currentFile" required/>
@@ -60,7 +61,7 @@
                                 <!-- Price -->
                                 <div class="form-group">
                                     <label class="col-form-label" for="price"> Price </label>
-                                    <input class="form-control @error('price') is-invalid @enderror" name="price" value="{{ old('price') }}" id="price" type="number" required />
+                                    <input class="form-control @error('price') is-invalid @enderror" name="price" value="{{ old('price') }}" id="price" type="number" max="999999999999" required />
                                     @error('price')
                                         <small class="invalid-feedback">
                                             <div class="alert alert-danger">{{ $message }}</div>

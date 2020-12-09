@@ -35,7 +35,7 @@ class Image
                 $request['picture'] = $request['currentFile'];
             }
         }else{
-            $request['picture'] = "img/products/default.jpg";
+            $request['picture'] = null;
         }
     }
 }

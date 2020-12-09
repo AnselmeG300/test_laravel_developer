@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->unsignedDecimal('price', 8, 2);;
+            $table->unsignedDecimal('price', 14, 2);
             $table->text('picture');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');         
             $table->timestamps();
