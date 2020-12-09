@@ -13,12 +13,8 @@
 		<!-- Bootstrap core CSS -->
 		<link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
 
-		<!-- Favicons -->
-		<link rel="apple-touch-icon" href="{{asset('img/market_icon.png')}}" sizes="180x180">
-		<link rel="icon" href="{{asset('img/market_icon.png')}}" sizes="32x32" type="image/png">
-		<link rel="icon" href="{{asset('img/market_icon.png')}}" sizes="16x16" type="image/png">
-		<link rel="mask-icon" href="{{asset('img/market_icon.png')}}" color="#e24827">
-		<link rel="icon" href="{{asset('img/market_icon.png')}}">
+		<link href="{{asset('css/carousel.css')}}" rel="stylesheet">
+
 		<meta name="theme-color" content="#563d7c">
 		<style>
 		  .bd-placeholder-img {
@@ -91,14 +87,57 @@
 
 <main role="main">
 
-  <section class="jumbotron text-center">
-	<div class="container">
-	  <h1>List of products</h1>
-	  <p class="lead text-muted">Find all the sold products.</p>
-	</div>
+  	<section>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img class="first-slide img img-responsive" src="{{asset('img/publicities/bioromance.jpg')}}" alt="First slide">
+				<div class="container">
+				<div class="carousel-caption text-left">
+					<h1>Best product of the day: BIOPHARMA Bioromance</h1>
+					<p>Promote your products ;) .</p>
+					<p><a class="btn btn-lg btn-primary" href="{{ route('products.create') }}" role="button">Post product today</a></p>
+				</div>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img class="second-slide img img-responsive" src="{{asset('img/publicities/NiveaCare.jpg')}}" alt="Second slide">
+				<div class="container">
+				<div class="carousel-caption text-black">
+					<h1>Publicity: Nivea Care</h1>
+					<p>Go further ..., opt for the premium option so that your products are always at the forefront.  .</p>
+					<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p></FONT>
+				</div>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img class="third-slide img img-responsive" src="{{asset('img/publicities/fruits.jpg')}}" alt="Third slide">
+				<div class="container">
+				<div class="carousel-caption text-right">
+					<h1>Competitor.</h1>
+					<p>Also look at competing products in order to optimize your prices.</p>
+					<p><a class="btn btn-lg btn-primary" href="#products" role="button">Browse gallery</a></p>
+				</div>
+				</div>
+			</div>
+			</div>
+			<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+			</a>
+		</div>
   </section>
 
-  <div class="album py-5 bg-light">
+  <div class="album py-5 bg-light" id="products">
 	<div class="container">
 	  	<div class="row">
 		  	@if(!empty(App\Models\Product::all()) && count(App\Models\Product::all()) != 0)
@@ -139,5 +178,6 @@
 </footer>
 <script src="{{asset('js/jquery-3.5.1.slim.min.js')}}"></script>
 <script src="{{asset('js/bootstrap.bundle.min.js')}}" ></script>
+<script src="{{asset('js/holder.min.js')}}" ></script>
 </body>
 </html>
